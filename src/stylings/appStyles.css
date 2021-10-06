@@ -1,0 +1,29 @@
+.errorMsg {
+    color: red;
+    padding-top: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+.flex-container > div {
+    width: 90px;
+    margin: 5px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 19px;
+}
+
+.flex-container > div:nth-child(2) {
+    width:20px !important;
+}
+
+.flex-container > div:nth-child(3) {
+    width:40px !important;
+}
+
+.flex-container > div:nth-child(4) {
+    width:20px !important;
+}

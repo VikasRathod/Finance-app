@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import WithdrawAmount from './components/withdraw/WithdrawAmount';
+import DepositAmount from './components/deposit/DepositAmount';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Home />
+        <Switch>
+          <Route exact path='/withdraw' component={WithdrawAmount} />
+          <Route path='/deposit' component={DepositAmount} />
+        </Switch>
+      </Router>
     </div>
   );
 }
